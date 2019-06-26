@@ -1,0 +1,297 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Admin{% endblock title %}
+{% block content %}
+
+
+
+                    <!-- Page content -->
+                    <div id="page-content">
+                        <!-- eCommerce Product Edit Header -->
+                        <div class="content-header">
+                            <ul class="nav-horizontal text-center">
+                                <li>
+                                    <a href="/page_ecom_dashboard/"><i class="fa fa-bar-chart"></i> Dashboard</a>
+                                </li>
+                                <li>
+                                    <a href="/page_ecom_orders/"><i class="gi gi-shop_window"></i> Orders</a>
+                                </li>
+                                <li>
+                                    <a href="/page_ecom_order_view/"><i class="gi gi-shopping_cart"></i> Order View</a>
+                                </li>
+                                <li>
+                                    <a href="/page_ecom_products/"><i class="gi gi-shopping_bag"></i> Products</a>
+                                </li>
+                                <li class="active">
+                                    <a href="/page_ecom_product_edit/"><i class="gi gi-pencil"></i> Product Edit</a>
+                                </li>
+                                <li>
+                                    <a href="/page_ecom_customer_view/"><i class="gi gi-user"></i> Customer View</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- END eCommerce Product Edit Header -->
+
+                        <!-- Product Edit Content -->
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <!-- General Data Block -->
+                                <div class="block">
+                                    <!-- General Data Title -->
+                                    <div class="block-title">
+                                        <h2><i class="fa fa-pencil"></i> <strong>General</strong> Data</h2>
+                                    </div>
+                                    <!-- END General Data Title -->
+
+                                    <!-- General Data Content -->
+                                    <form action="page_ecom_product_edit.html" method="post" class="form-horizontal form-bordered" onsubmit="return false;">
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="product-id">PID</label>
+                                            <div class="col-md-9">
+                                                <input type="text" id="product-id" name="product-id" class="form-control" value="6825">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="product-name">Name</label>
+                                            <div class="col-md-9">
+                                                <input type="text" id="product-name" name="product-name" class="form-control" placeholder="Enter product name..">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="product-short-description">Short Description</label>
+                                            <div class="col-md-9">
+                                                <textarea id="product-short-description" name="product-short-description" class="form-control" rows="3" placeholder="Enter short description"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="product-description">Description</label>
+                                            <div class="col-md-9">
+                                                <!-- CKEditor, you just need to include the plugin (see at the bottom of this page) and add the class 'ckeditor' to your textarea -->
+                                                <!-- More info can be found at http://ckeditor.com -->
+                                                <textarea id="product-description" name="product-description" class="ckeditor"></textarea>
+                                            </div>
+                                        </div>
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label" for="example-chosen-multiple">Category</label>
+                                                <div class="col-md-9">
+                                                    <select id="example-chosen-multiple" name="example-chosen-multiple" class="select-chosen" data-placeholder="Choose category.." style="width: 250px;" multiple>
+                                                         <option value="Category-1">Category 1</option>
+                                                         <option value="Category-2">Category 2</option>
+                                                         <option value="Category-3">Category 3</option>
+                                                         <option value="Category-4">Category 4</option>
+                                                         <option value="Category-5">Category 5</option>
+                                                         <option value="Category-6">Category 6</option>
+                                                         <option value="Category-7">Category 1</option>
+                                                         <option value="Category-8">Category 8</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="product-price">Price</label>
+                                            <div class="col-md-9">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon"><i class="fa fa-inr"></i></div>
+                                                    <input type="text" id="product-price" name="product-price" class="form-control" placeholder="0,00">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">Condition</label>
+                                            <div class="col-md-9">
+                                                <label class="radio-inline" for="product-condition-new">
+                                                    <input type="radio" id="product-condition-new" name="product-condition" value="condition_new" checked> New
+                                                </label>
+                                                <label class="radio-inline" for="product-condition-used">
+                                                    <input type="radio" id="product-condition-used" name="product-condition" value="condition_used"> Used
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">Published?</label>
+                                            <div class="col-md-9">
+                                                <label class="switch switch-primary">
+                                                    <input type="checkbox" id="product-status" name="product-status" checked><span></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group form-actions">
+                                            <div class="col-md-9 col-md-offset-3">
+                                                <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-floppy-o"></i> Save</button>
+                                                <button type="reset" class="btn btn-sm btn-warning"><i class="fa fa-repeat"></i> Reset</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- END General Data Content -->
+                                </div>
+                                <!-- END General Data Block -->
+                            </div>
+                            <div class="col-lg-6">
+                                <!-- Meta Data Block -->
+                                <!-- Product Images Block -->
+                                <div class="block">
+                                    <!-- Product Images Title -->
+                                    <div class="block-title">
+                                        <h2><i class="fa fa-picture-o"></i> <strong>Product</strong> Images</h2>
+                                    </div>
+                                    <!-- END Product Images Title -->
+
+                                    <!-- Product Images Content -->
+                                    <div class="block-section">
+                                        <!-- Dropzone.js, You can check out https://github.com/enyo/dropzone/wiki for usage examples -->
+                                        <form action="page_ecom_product_edit.html" class="dropzone"></form>
+                                    </div>
+                                    <table class="table table-bordered table-striped table-vcenter">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width: 20%;">
+                                                    <a href="/static/img/placeholders/photos/photo11.jpg" data-toggle="lightbox-image">
+                                                        <img src="/static/img/placeholders/photos/photo11.jpg" alt="" class="img-responsive center-block" style="max-width: 110px;">
+                                                    </a>
+                                                </td>
+                                                <td class="text-center">
+                                                    <label class="switch switch-primary">
+                                                        <input type="checkbox" checked><span></span>
+                                                    </label>
+                                                    Cover
+                                                </td>
+                                                <td class="text-center">
+                                                    <a href="javascript:void(0)" class="btn btn-xs btn-danger"><i class="fa fa-trash-o"></i> Delete</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="/static/img/placeholders/photos/photo13.jpg" data-toggle="lightbox-image">
+                                                        <img src="/static/img/placeholders/photos/photo13.jpg" alt="" class="img-responsive center-block" style="max-width: 110px;">
+                                                    </a>
+                                                </td>
+                                                <td class="text-center">
+                                                    <label class="switch switch-primary">
+                                                        <input type="checkbox"><span></span>
+                                                    </label>
+                                                    Cover
+                                                </td>
+                                                <td class="text-center">
+                                                    <a href="javascript:void(0)" class="btn btn-xs btn-danger"><i class="fa fa-trash-o"></i> Delete</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="/static/img/placeholders/photos/photo9.jpg" data-toggle="lightbox-image">
+                                                        <img src="/static/img/placeholders/photos/photo9.jpg" alt="" class="img-responsive center-block" style="max-width: 110px;">
+                                                    </a>
+                                                </td>
+                                                <td class="text-center">
+                                                    <label class="switch switch-primary">
+                                                        <input type="checkbox"><span></span>
+                                                    </label>
+                                                    Cover
+                                                </td>
+                                                <td class="text-center">
+                                                    <a href="javascript:void(0)" class="btn btn-xs btn-danger"><i class="fa fa-trash-o"></i> Delete</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- END Product Images Content -->
+                                </div>
+                                <!-- END Product Images Block -->
+                                <!-- Meta Data Block -->
+                                <div class="block">
+                                    <!-- Meta Data Title -->
+                                    <div class="block-title">
+                                        <h2><i class="gi gi-cogwheel"></i> <strong>Product</strong> Settings</h2>
+                                    </div>
+                                    <!-- END Meta Data Title -->
+
+                                    <!-- Meta Data Content -->
+                                    <form action="page_ecom_product_edit.html" method="post" class="form-horizontal form-bordered" onsubmit="return false;">
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label" for="example-chosen">Unit</label>
+                                                <div class="col-md-9">
+                                                    <select id="example-chosen" name="example-chosen" class="select-chosen" data-placeholder="Choose Unit.." style="width: 250px;">
+                                                        <option></option><!-- Required for data-placeholder attribute to work with Chosen plugin -->
+                                                        <option value="Unit-1">Unit 1</option>
+                                                        <option value="Unit-2">Unit 2</option>
+                                                        <option value="Unit-3">Unit 3</option>
+                                                        <option value="Unit-4">Unit 4</option>
+                                                        <option value="Unit-5">Unit 5</option>
+                                                        <option value="Unit-6">Unit 6</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label" for="example-chosen">Subunit</label>
+                                                <div class="col-md-9">
+                                                    <select id="example-chosen" name="example-chosen" class="select-chosen" data-placeholder="Choose Subunit.." style="width: 250px;">
+                                                        <option></option><!-- Required for data-placeholder attribute to work with Chosen plugin -->
+                                                        <option value="Subunit-1">Subunit 1</option>
+                                                        <option value="Subunit-2">Subunit 2</option>
+                                                        <option value="Subunit-3">Subunit 3</option>
+                                                        <option value="Subunit-4">Subunit 4</option>
+                                                        <option value="Subunit-5">Subunit 5</option>
+                                                        <option value="Subunit-6">Subunit 6</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label" for="example-chosen">Default Sale Unit</label>
+                                                <div class="col-md-9">
+                                                    <select id="example-chosen" name="example-chosen" class="select-chosen" data-placeholder="Choose Default sale unit.." style="width: 250px;">
+                                                        <option></option><!-- Required for data-placeholder attribute to work with Chosen plugin -->
+                                                        <option value="Default sale unit-1">Default sale unit 1</option>
+                                                        <option value="Default sale unit-2">Default sale unit 2</option>
+                                                        <option value="Default sale unit-3">Default sale unit 3</option>
+                                                        <option value="Default sale unit-4">Default sale unit 4</option>
+                                                        <option value="Default sale unit-5">Default sale unit 5</option>
+                                                        <option value="Default sale unit-6">Default sale unit 6</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label" for="example-chosen">Product Tax</label>
+                                                <div class="col-md-9">
+                                                    <select id="example-chosen" name="example-chosen" class="select-chosen" data-placeholder="Choose Product Tax.." style="width: 250px;">
+                                                        <option></option><!-- Required for data-placeholder attribute to work with Chosen plugin -->
+                                                        <option value="Product Tax-1">Product Tax 1</option>
+                                                        <option value="Product Tax-2">Product Tax 2</option>
+                                                        <option value="Product Tax-3">Product Tax 3</option>
+                                                        <option value="Product Tax-4">Product Tax 4</option>
+                                                        <option value="Product Tax-5">Product Tax 5</option>
+                                                        <option value="Product Tax-6">Product Tax 6</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">Tax Method</label>
+                                                <div class="col-md-9">
+                                                    <select id="example-chosen" name="example-chosen" class="select-chosen" data-placeholder="Choose Tax Method.." style="width: 250px;">
+                                                        <option></option><!-- Required for data-placeholder attribute to work with Chosen plugin -->
+                                                        <option value="Exclusive">Exclusive</option>
+                                                        <option value="Inclusive">Inclusive</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="example-hf-alert quantity">Alert Quantity</label>
+                                            <div class="col-md-9">
+                                                <input type="alert quantity" id="example-hf-alert quantity" name="example-hf-alert quantity" class="form-control" placeholder="Enter alert quantity..">
+                                                <span class="help-block">Please enter your alert quantity</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group form-actions">
+                                            <div class="col-md-9 col-md-offset-3">
+                                                <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-floppy-o"></i> Save</button>
+                                                <button type="reset" class="btn btn-sm btn-warning"><i class="fa fa-repeat"></i> Reset</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- END Meta Data Content -->
+                                </div>
+                                <!-- END Meta Data Block -->
+                            </div>
+                        </div>
+                        <!-- END Product Edit Content -->
+                    </div>
+                    <!-- END Page Content -->
+
+{% endblock content %}

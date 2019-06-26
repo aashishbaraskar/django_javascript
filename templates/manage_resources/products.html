@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Admin{% endblock title %}
+{% block content %}
+     <!-- Page content -->
+     <div id="page-content">
+            <!-- Datatables Header -->
+            <div class="content-header">
+                <div class="header-section">
+                    <h1>
+                            Products
+                    </div>
+                </div>
+                <ul class="breadcrumb breadcrumb-top">
+                    <li>Manage Resources</li>
+                    <li><a href="#">Products</a></li>
+                </ul>
+                <!-- END Datatables Header -->
+
+                <!-- Datatables Content -->
+                <div class="block full">
+                    <div class="block-title">
+                        <h2><strong>Products</strong> integration</h2>
+                        <p class="AddNew"><b><a href="#" onclick="$('#myModal').modal('show');">ADD NEW +</a> </b></p>
+                    </div>
+                    <p>Admin Can Add / edit and Delete Units and Assign Brands</p>
+
+                    <div class="table-responsive">
+                        <table id="example" class="table table-vcenter table-condensed table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">ID</th>
+                                    <th class="text-center">Brand Category</th>
+                                    <th class="text-center">Brand Sub-Category</th>
+                                    <th class="text-center">Brand-Wastage</th>
+                                    <th class="text-center">Brand-Quantity</th>
+                                    <th class="text-center">Status</th>
+                                    <th class="text-center">Action</th>
+
+                                </tr>
+                                </thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <td>1</td>
+                                    <td>Brand Name</td>
+                                    <td><img src="img/placeholders/avatars/avatar15.jpg" alt="avatar" class="img-circle"></td>
+                                    <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                    <td>                                                <div class="btn-group">
+                                                <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                            </div></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- END Datatables Content -->
+            </div>
+            <!-- END Page Content -->
+
+
+
+              <!-- Modal -->
+        <div id="myModal" class="modal fade" tabindex="-2" role="dialog" aria-hidden="true">
+                <div class="modal-dialog animation-slideDown">
+
+                  <!-- Modal content-->
+                  <div class="modal-content CustomModal">
+                    <div class="modal-body">
+                      <div id="loginCustom">
+                          <!-- Login Title -->
+                          <div class="login-title text-right">
+                              <h1>
+                                  <i class="Unitsss fa fa-star-o pull-left"></i>
+                                  <strong>Manage</strong> products<br>
+                                  <br>
+                              </h1>
+                              </div>
+                              <!-- END Login Title -->
+
+                              <!-- Login Block -->
+                              <div class="block">
+                                  <form action="#" method="post" class="form-horizontal form-bordered" onsubmit="return false;">
+
+                                    <form action="#" method="post" class="form-horizontal form-bordered" onsubmit="return false;">
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="example-hf-text">Product Name </label>
+                                            <div class="col-md-9">
+                                                <input type="text" id="example-hf-text" name="example-hf-text" class="form-control" placeholder="Enter Product name">
+                                                <span class="help-block">Please enter Product name</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="example-hf-text">Varient</label>
+                                            <div class="col-md-9">
+                                                <select id="example-chosen" name="example-chosen" class="select-chosen" data-placeholder="Choose Varient" style="width: 250px;">
+                                                        <option></option><!-- Required for data-placeholder attribute to work with Chosen plugin -->
+                                                        <option value="Parent Category 1">Parent Category 1</option>
+                                                        <option value="Parent Category 2">Parent Category 2</option>
+                                                        <option value="Parent Category 3">Parent Category 3</option>
+                                                        <option value="Parent Category 4">Parent Category 4</option>
+                                                        <option value="Parent Category 5">Parent Category 5</option>
+                                                        <option value="Parent Category 6">Parent Category 6</option>
+                                                    </select>
+                                                <span class="help-block">Please select Varient</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="example-hf-text">Brands</label>
+                                            <div class="col-md-9">
+                                                <select id="example-chosen" name="example-chosen" class="select-chosen" data-placeholder="Choose Brand" style="width: 250px;">
+                                                        <option></option><!-- Required for data-placeholder attribute to work with Chosen plugin -->
+                                                        <option value="Parent Category 1">Parent Category 1</option>
+                                                        <option value="Parent Category 2">Parent Category 2</option>
+                                                        <option value="Parent Category 3">Parent Category 3</option>
+                                                        <option value="Parent Category 4">Parent Category 4</option>
+                                                        <option value="Parent Category 5">Parent Category 5</option>
+                                                        <option value="Parent Category 6">Parent Category 6</option>
+                                                    </select>
+                                                <span class="help-block">Please select Brands</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group form-actions">
+                                            <div class="col-md-6 col-md-offset-3">
+                                                <button class="btn btn-sm btn btn-success" onclick="save_subcategory()" type="button"><i
+                                                        class="fa fa-save"></i>
+                                                    Submit
+                                                </button>
+                                                <button class="btn btn-sm btn-danger" type="submit"><i class="fa fa-times"></i>
+                                                    Reset
+                                                </button>
+                                            </div>
+                                         </div>
+                                  </form>
+                              </div>
+                              <!-- END Login Block -->
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+
+{% endblock content %}
+
+        <!-- Load and execute javascript code used only in this page -->
+        <script src="{% static 'js/pages/tablesDatatables.js' %}"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#example').DataTable();
+                $('input[type="search"]').attr('placeholder', 'Search here');
+                $('input[type="search"]').addClass('searchh');
+
+            } );
+        </script>

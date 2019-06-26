@@ -1,0 +1,460 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Admin{% endblock title %}
+{% block content %}
+
+
+                <!-- Page content -->
+                <div id="page-content">
+                    <!-- Datatables Header -->
+                    <div class="content-header">
+                        <div class="header-section">
+                            <h1>
+                                    Cold Storage
+                            </div>
+                        </div>
+                        <ul class="breadcrumb breadcrumb-top">
+                            <li>Manage Resources</li>
+                            <li><a href="#">Cold Storage</a></li>
+                        </ul>
+                        <!-- END Datatables Header -->
+
+                        <!-- Datatables Content -->
+                        <div class="block full">
+                            <div class="block-title">
+                                <h2><strong>Cold Storage</strong> integration</h2>
+                                <p class="AddNew"><b><a href="#" onclick="$('#myModal').modal('show');">ADD NEW +</a> </b></p>
+                            </div>
+                            <p>Admin Can Add / edit and Delete Units and Assign Cold Storage</p>
+
+                            <div class="table-responsive">
+                                <table id="example" class="table table-vcenter table-condensed table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">ID</th>
+                                            <th class="text-center">Depot Code</th>
+                                            <th class="text-center">Dispatch Depot Name</th>
+                                            <th class="text-center">DD City</th>
+                                            <th class="text-center">Address</th>
+                                            <th class="text-center">Map ID</th>
+                                            <th class="text-center">DD WareHouse</th>
+                                            <th class="text-center">Status</th>
+                                            <th class="text-center">Actions</th>
+                                        </tr>
+                                        </thead>
+                                    <tbody class="text-center">
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Depot Code</td>
+                                            <td>Depot Name</td>
+                                            <td>DD City</td>
+                                            <td>Address</td>
+                                            <td>Map ID</td>
+                                            <td>DD WareHouse</td>
+                                            <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                                            <td>                                                <div class="btn-group">
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                                                    </div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- END Datatables Content -->
+                    </div>
+                    <!-- END Page Content -->
+{% endblock content %}

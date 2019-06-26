@@ -1,0 +1,16 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+{% block title %}Admin{% endblock title %}
+{% block extrastyle %}    
+{{ block.super }}    
+<link rel="stylesheet" href="{% static 'css/admin.css' %}">
+
+
+{% endblock %}
+
+{% block branding %}
+  <h1 id="head">
+      <center><img src="{% static 'img/logo.png' %}" alt="Farmflyer-Admin" height="80" width="140" class="brand_img"></center>
+      Please <strong>Login</strong> into Farmflyer Admin
+  </h1>
+{% endblock %}

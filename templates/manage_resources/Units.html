@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Admin{% endblock title %}
+{% block content %}
+
+    <!-- Page content -->
+    <div id="page-content"> 
+            <!-- Datatables Header -->
+            <div class="content-header">
+                <div class="header-section">
+                    <h1>
+                            Units
+                    </h1>
+                </div>
+            </div>
+                <ul class="breadcrumb breadcrumb-top">
+                    <li>Manage Resources </li>
+                    <li><a href="#">Units</a></li>
+                </ul>
+                <!-- END Datatables Header -->
+
+                <!-- Datatables Content -->
+                <div class="block full">
+                    <div class="block-title">
+                        <h2><strong>Units</strong> integration</h2>
+                        <p class="AddNew"><b><a href="#" onclick="show_unit_modal()">ADD NEW +</a> </b></p>
+                    </div>
+                    <p>Admin Can Add / edit and Delete Units and Assign Base Units</p>
+
+                    <div class="table-responsive">
+                        <table id="unit_datatable" class="table table-vcenter table-condensed table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">ID</th>
+                                    <th class="text-center">Units Name</th>
+                                    <th class="text-center">Base Units</th>
+                                    <th class="text-center">Status</th>
+                                    <th class="text-center">Actions</th>
+                                </tr>
+                                </thead>
+                            <tbody class="text-center">
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- END Datatables Content -->
+            </div>
+            <!-- END Page Content -->        
+
+
+
+
+    
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" tabindex="-2" role="dialog" aria-hidden="true">
+      <div class="modal-dialog animation-slideDown">
+
+        <!-- Modal content-->
+        <div class="modal-content CustomModal">
+          <div class="modal-body">
+            <div id="loginCustom">
+                <!-- Login Title -->
+                <div class="login-title text-right">
+                    <h1>
+                        <i class="Unitsss fa fa-cube pull-left"></i>
+                        <strong>Manage</strong> Units<br>
+                        <br>
+                    </h1>
+                    </div>
+                    <!-- END Login Title -->
+
+                    <!-- Login Block -->
+                    <div class="block">
+                        <form action="#" method="post" class="form-horizontal form-bordered" onsubmit="$('.error').remove();">
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="unit-name">Unit Name</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="unit-name" name="unit-name" class="form-control" placeholder="Enter unit name">
+                                    <span class="help-block">Please enter unit name</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="base-unit">Base Unit</label>
+                                <div class="col-md-9">
+                                    <select id="base-unit" name="base-unit" class="select-chosen" data-placeholder="Choose Base Unit" style="width: 250px;">
+                                        <option></option><!-- Required for data-placeholder attribute to work with Chosen plugin -->
+                                        <option value="Base Unit 1">Base Unit 1</option>
+                                        <option value="Base Unit 2">Base Unit 2</option>
+                                        <option value="Base Unit 3">Base Unit 3</option>
+                                        <option value="Base Unit 4">Base Unit 4</option>
+                                        <option value="Base Unit 5">Base Unit 5</option>
+                                        <option value="Base Unit 6">Base Unit 6</option>
+                                        <option value="Base Unit 7">Base Unit 7</option>
+                                        <option value="Base Unit 8">Base Unit 8</option>
+                                    </select>
+                                    <span class="help-block">Please select base unit</span>
+                                </div>
+                            </div>
+                            <input hidden id="hidden_unit_id">
+                           <!-- <div class="form-group">
+                                <label class="col-md-3 control-label" for="example-hf-text">Status</label>
+                                <div class="col-md-9">
+                                    <label class="switch switch-primary">
+                                        <input type="checkbox" checked=""><span></span></label>
+                                </div>
+                            </div>-->
+                            <div class="form-group form-actions">
+                                <div class="col-md-9 col-md-offset-3">
+                                    <button type="button" id= "save-unit" class="btn btn-sm btn btn-success"><i class="fa fa-save"></i> saved</button>
+                                    <button type="button" class="btn btn-sm btn btn-success" id="update-unit" style="display:none;">
+                                        <i class="fa fa-save"></i>Update
+                                    </button>
+                                    <button type="submit" class="btn btn-sm btn-danger"><i class="fa fa-times"></i>
+                                        Reset
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- END Login Block -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+{% endblock content %}
+
+
+
+{% block js_block %}
+<!-- Load and execute javascript code used only in this page -->
+<script src="{% static 'js/pages/manage_resources/units.js' %}"></script>
+{% endblock %}

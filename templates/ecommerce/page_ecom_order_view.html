@@ -1,0 +1,412 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Admin{% endblock title %}
+{% block content %}
+
+
+                    <div id="page-content">
+                        <!-- eCommerce Order View Header -->
+                        <div class="content-header">
+                            <ul class="nav-horizontal text-center">
+                                <li>
+                                    <a href="/page_ecom_dashboard/"><i class="fa fa-bar-chart"></i> Dashboard</a>
+                                </li>
+                                <li>
+                                    <a href="/page_ecom_orders/"><i class="gi gi-shop_window"></i> Orders</a>
+                                </li>
+                                <li class="active">
+                                    <a href="/page_ecom_order_view/"><i class="gi gi-shopping_cart"></i> Order View</a>
+                                </li>
+                                <li>
+                                    <a href="/page_ecom_products/"><i class="gi gi-shopping_bag"></i> Products</a>
+                                </li>
+                                <li>
+                                    <a href="/page_ecom_product_edit/"><i class="gi gi-pencil"></i> Product Edit</a>
+                                </li>
+                                <li>
+                                     <a href="/page_ecom_customer_view/"><i class="gi gi-user"></i> Customer View</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- END eCommerce Order View Header -->
+
+                        <!-- Order Status -->
+                        <div class="row text-center">
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="widget">
+                                    <div class="widget-extra themed-background-success">
+                                        <h4 class="widget-content-light"><strong>ORD.685195</strong></h4>
+                                    </div>
+                                    <div class="widget-extra-full"><span class="h2 text-success animation-expandOpen">15/10/2014</span></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="widget">
+                                    <div class="widget-extra themed-background-success">
+                                        <h4 class="widget-content-light"><i class="fa fa-check"></i> <strong>Assigned</strong></h4>
+                                    </div>
+                                    <div class="widget-extra-full"><span class="h2 text-success animation-expandOpen"><i class="fa fa-check"></i></span></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <a href="page_ecom_packaging.html" class="widget widget-hover-effect2">
+                                    <div class="widget-extra themed-background-success">
+                                        <h4 class="widget-content-light"><strong>Packaging</strong></h4>
+                                    </div>
+                                    <div class="widget-extra-full"><span class="h2 text-success animation-expandOpen"><i class="fa fa-shopping-bag"></i></span></div>
+                                </a>
+<!--                                 <div class="widget">
+                                    <div class="widget-extra themed-background-warning">
+                                        <h4 class="widget-content-light"><i class="fa fa-archive"></i> <strong>Packaging</strong></h4>
+                                    </div>
+                                    <div class="widget-extra-full"><span class="h2 text-warning"><i class="fa fa-refresh fa-spin"></i></span></div>
+                                </div> -->
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="widget">
+                                    <div class="widget-extra themed-background-muted">
+                                        <h4 class="widget-content-light"><i class="fa fa-truck"></i> <strong>Delivery</strong></h4>
+                                    </div>
+                                    <div class="widget-extra-full"><span class="h2 text-muted animation-pulse"><i class="fa fa-ellipsis-h"></i></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END Order Status -->
+
+                        <!-- Products Block -->
+                        <div class="block">
+                            <!-- Products Title -->
+                            <div class="block-title">
+                                <h2><i class="fa fa-shopping-cart"></i> <strong>Products</strong></h2>
+                            </div>
+                            <!-- END Products Title -->
+
+                            <!-- Products Content -->
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-vcenter">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" style="width: 100px;">ID</th>
+                                            <th>Product Name</th>
+                                            <th class="text-center">Stock</th>
+                                            <th class="text-center">QTY</th>
+                                            <th class="text-right" style="width: 10%;">UNIT COST</th>
+                                            <th class="text-right" style="width: 10%;">PRICE</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center"><a href="page_ecom_product_edit.html"><strong>PID.8715</strong></a></td>
+                                            <td><a href="page_ecom_product_edit.html">Xbox One</a></td>
+                                            <td class="text-center"><strong>720</strong></td>
+                                            <td class="text-center"><strong>1</strong></td>
+                                            <td class="text-right"><strong>₹399,00</strong></td>
+                                            <td class="text-right"><strong>₹399,00</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><a href="page_ecom_product_edit.html"><strong>PID.8726</strong></a></td>
+                                            <td><a href="page_ecom_product_edit.html">Forza Motorsport 5</a></td>
+                                            <td class="text-center"><strong>368</strong></td>
+                                            <td class="text-center"><strong>1</strong></td>
+                                            <td class="text-right"><strong>₹59,00</strong></td>
+                                            <td class="text-right"><strong>₹59,00</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><a href="page_ecom_product_edit.html"><strong>PID.8760</strong></a></td>
+                                            <td><a href="page_ecom_product_edit.html">Playstation 4</a></td>
+                                            <td class="text-center"><strong>652</strong></td>
+                                            <td class="text-center"><strong>1</strong></td>
+                                            <td class="text-right"><strong>₹399,00</strong></td>
+                                            <td class="text-right"><strong>₹399,00</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><a href="page_ecom_product_edit.html"><strong>PID.8728</strong></a></td>
+                                            <td><a href="page_ecom_product_edit.html">Killzone: Shadow Fall</a></td>
+                                            <td class="text-center"><strong>368</strong></td>
+                                            <td class="text-center"><strong>1</strong></td>
+                                            <td class="text-right"><strong>₹59,00</strong></td>
+                                            <td class="text-right"><strong>₹59,00</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><a href="page_ecom_product_edit.html"><strong>PID.8763</strong></a></td>
+                                            <td><a href="page_ecom_product_edit.html">Little Big Planet 3</a></td>
+                                            <td class="text-center"><strong>150</strong></td>
+                                            <td class="text-center"><strong>1</strong></td>
+                                            <td class="text-right"><strong>₹59,00</strong></td>
+                                            <td class="text-right"><strong>₹59,00</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="text-right text-uppercase"><strong>Total Price:</strong></td>
+                                            <td class="text-right"><strong>₹975,00</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="text-right text-uppercase"><strong>Total Paid:</strong></td>
+                                            <td class="text-right"><strong>₹975,00</strong></td>
+                                        </tr>
+                                        <tr class="active">
+                                            <td colspan="5" class="text-right text-uppercase"><strong>Total Due:</strong></td>
+                                            <td class="text-right"><strong>₹0,00</strong></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- END Products Content -->
+                        </div>
+                        <!-- END Products Block -->
+
+                        <!-- Addresses -->
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <!-- Billing Address Block -->
+                                <div class="block">
+                                    <!-- Billing Address Title -->
+                                    <div class="block-title">
+                                        <h2><i class="fa fa-th-large"></i> <strong>Warehouse</strong> Dispacth</h2>
+                                    </div>
+                                    <!-- END Billing Address Title -->
+                                    <div class="row">
+                                        <label class="col-md-3 control-label" for="example-hf-text">Warehouse</label>
+                                        <div class="col-md-9">
+                                            <select id="example-chosen" name="example-chosen" class="select-chosen" data-placeholder="Choose Warehouse" style="width: 250px;">
+                                                <option></option><!-- Required for data-placeholder attribute to work with Chosen plugin -->
+                                                <option value="Warehouse 1">Warehouse 1</option>
+                                                <option value="Warehouse 2">Warehouse 2</option>
+                                                <option value="Warehouse 3">Warehouse 3</option>
+                                                <option value="Warehouse 4">Warehouse 4</option>
+                                            </select>
+                                            <span class="help-block">Please select warehouse</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-md-3 control-label" for="example-hf-text">Cold Storage</label>
+                                        <div class="col-md-9">
+                                            <select id="example-chosen" name="example-chosen" class="select-chosen" data-placeholder="Choose Cold Storage" style="width: 250px;">
+                                                <option></option><!-- Required for data-placeholder attribute to work with Chosen plugin -->
+                                                <option value="Cold Storage 1">Cold Storage 1</option>
+                                                <option value="Cold Storage 2">Cold Storage 2</option>
+                                                <option value="Cold Storage 3">Cold Storage 3</option>
+                                                <option value="Cold Storage 4">Cold Storage 4</option>
+                                            </select>
+                                            <span class="help-block">Please select cold storage</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-md-3 control-label" for="example-hf-text">Dispatch Depot</label>
+                                        <div class="col-md-9">
+                                            <select id="example-chosen" name="example-chosen" class="select-chosen" data-placeholder="Choose Dispatch Depot" style="width: 250px;">
+                                                <option></option><!-- Required for data-placeholder attribute to work with Chosen plugin -->
+                                                <option value="Dispatch Depot 1">Dispatch Depot 1</option>
+                                                <option value="Dispatch Depot 2">Dispatch Depot 2</option>
+                                                <option value="Dispatch Depot 3">Dispatch Depot 3</option>
+                                                <option value="Dispatch Depot 4">Dispatch Depot 4</option>
+                                            </select>
+                                            <span class="help-block">Please select dispatch depot</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-sm-offset-3">
+                                            <button type="button" class="btn btn-success">&nbsp;&nbsp;Save&nbsp;&nbsp;</button>
+                                        </div>
+                                    </div>
+                                    <br>
+                                </div>
+                                <!-- END Billing Address Block -->
+                            </div>
+                            <div class="col-sm-6">
+                                <!-- Shipping Address Block -->
+                                <div class="block">
+                                    <!-- Shipping Address Title -->
+                                    <div class="block-title">
+                                        <h2><i class="fa fa-truck"></i> <strong>Delivery</strong> Partner</h2>
+                                    </div>
+                                    <!-- END Shipping Address Title -->
+
+                                    <div class="row">
+                                        <label class="col-md-3 control-label" for="example-hf-text">Delivery Partner</label>
+                                        <div class="col-md-9">
+                                            <select id="example-chosen" name="example-chosen" class="select-chosen" data-placeholder="Choose Delivery Partner" style="width: 250px;">
+                                                <option></option><!-- Required for data-placeholder attribute to work with Chosen plugin -->
+                                                <option value="Delivery Partner 1">Delivery Partner 1</option>
+                                                <option value="Delivery Partner 2">Delivery Partner 2</option>
+                                                <option value="Delivery Partner 3">Delivery Partner 3</option>
+                                                <option value="Delivery Partner 4">Delivery Partner 4</option>
+                                            </select>
+                                            <span class="help-block">Please select delivery partner</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-md-3 control-label" for="example-hf-text">Driver</label>
+                                        <div class="col-md-9">
+                                            <select id="example-chosen" name="example-chosen" class="select-chosen" data-placeholder="Choose Driver" style="width: 250px;">
+                                                <option></option><!-- Required for data-placeholder attribute to work with Chosen plugin -->
+                                                <option value="Driver 1">Driver 1</option>
+                                                <option value="Driver 2">Driver 2</option>
+                                                <option value="Driver 3">Driver 3</option>
+                                                <option value="Driver 4">Driver 4</option>
+                                            </select>
+                                            <span class="help-block">Please select driver</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="row">
+                                                <label class="col-md-3 control-label" for="example-datepicker">Date & Time</label>
+                                                <div class="col-md-4">
+                                                    <input type="text" id="example-datepicker" name="example-datepicker" class="form-control input-datepicker" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                                    <span class="help-block">Please select date</span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-group bootstrap-timepicker">
+                                                        <input type="text" id="example-timepicker24" name="example-timepicker24" class="form-control input-timepicker24">
+                                                        <span class="input-group-btn">
+                                                            <a href="javascript:void(0)" class="btn btn-primary"><i class="fa fa-clock-o"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+<!--                                         <div class="col-lg-6">
+                                            <div class="row">
+                                                <label class="col-md-3 control-label" for="example-timepicker24">Time</label>
+                                                <div class="col-md-9">
+                                                    <div class="input-group bootstrap-timepicker">
+                                                        <input type="text" id="example-timepicker24" name="example-timepicker24" class="form-control input-timepicker24">
+                                                        <span class="input-group-btn">
+                                                            <a href="javascript:void(0)" class="btn btn-primary"><i class="fa fa-clock-o"></i></a>
+                                                        </span>
+                                                    </div>
+                                                    <span class="help-block">Please select time</span>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-sm-offset-3">
+                                            <button type="button" class="btn btn-success">&nbsp;&nbsp;Save&nbsp;&nbsp;</button>
+                                        </div>
+                                    </div>
+                                    <br>
+                                </div>
+                                <!-- END Shipping Address Block -->
+                            </div>
+                        </div>
+                        <!-- END Addresses -->
+                        <!-- Addresses -->
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <!-- Billing Address Block -->
+                                <div class="block">
+                                    <!-- Billing Address Title -->
+                                    <div class="block-title">
+                                        <h2><i class="fa fa-building-o"></i> <strong>Billing</strong> Address</h2>
+                                    </div>
+                                    <!-- END Billing Address Title -->
+
+                                    <!-- Billing Address Content -->
+                                    <h4><strong>Amit Agarwal</strong></h4>
+                                    <address>
+                                        Mohannagar, Flat.No.206<br>
+                                        Pune,<br>
+                                        ndia, 411045<br><br>
+                                        <i class="fa fa-phone"></i> (999) 852-11111<br>
+                                        <i class="fa fa-envelope-o"></i> <a href="javascript:void(0)">amitagarwal@example.com</a>
+                                    </address>
+                                    <!-- END Billing Address Content -->
+                                </div>
+                                <!-- END Billing Address Block -->
+                            </div>
+                            <div class="col-sm-6">
+                                <!-- Shipping Address Block -->
+                                <div class="block">
+                                    <!-- Shipping Address Title -->
+                                    <div class="block-title">
+                                        <h2><i class="fa fa-building-o"></i> <strong>Shipping</strong> Address</h2>
+                                    </div>
+                                    <!-- END Shipping Address Title -->
+
+                                    <!-- Shipping Address Content -->
+                                    <h4><strong>Hari Shirke</strong></h4>
+                                    <address>
+                                        Sunset Avenue, Flat.No.407<br>
+                                        Badlapur, Mumbai<br>
+                                        India, 421503<br><br>
+                                        <i class="fa fa-phone"></i> (999) 852-22222<br>
+                                        <i class="fa fa-envelope-o"></i> <a href="javascript:void(0)">harishirke@example.com</a>
+                                    </address>
+                                    <!-- END Shipping Address Content -->
+                                </div>
+                                <!-- END Shipping Address Block -->
+                            </div>
+                        </div>
+                        <!-- END Addresses -->
+
+                        <!-- Log Block -->
+                        <div class="block">
+                            <!-- Log Title -->
+                            <div class="block-title">
+                                <h2><i class="fa fa-file-text-o"></i> <strong>Log</strong> Messages</h2>
+                            </div>
+                            <!-- END Log Title -->
+
+                            <!-- Log Content -->
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-vcenter">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span class="label label-primary">Order</span>
+                                            </td>
+                                            <td class="text-center">October 17, 2014 - 12:00</td>
+                                            <td><a href="javascript:void(0)">Support</a></td>
+                                            <td class="text-success"><i class="fa fa-fw fa-check"></i> <strong>Order Completed</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="label label-primary">Order</span>
+                                            </td>
+                                            <td class="text-center">October 17, 2014 - 10:15</td>
+                                            <td><a href="javascript:void(0)">Support</a></td>
+                                            <td class="text-info"><i class="fa fa-fw fa-info-circle"></i> <strong>Preparing Order</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="label label-success">Payment</span>
+                                            </td>
+                                            <td class="text-center">October 16, 2014 - 17:15</td>
+                                            <td><a href="javascript:void(0)">Harry Burke</a></td>
+                                            <td class="text-success"><i class="fa fa-fw fa-check"></i> <strong>Payment Completed</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="label label-danger">Email</span>
+                                            </td>
+                                            <td class="text-center">October 16, 2014 - 09:10</td>
+                                            <td><a href="javascript:void(0)">Support</a></td>
+                                            <td class="text-danger"><i class="fa fa-fw fa-exclamation-triangle"></i> <strong>Missing payment details. Email was sent and awaiting for payment before processing</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="label label-primary">Order</span>
+                                            </td>
+                                            <td class="text-center">October 15, 2014 - 12:26</td>
+                                            <td><a href="javascript:void(0)">Support</a></td>
+                                            <td><strong>All products are available</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="label label-primary">Order</span>
+                                            </td>
+                                            <td class="text-center">October 15, 2014 - 12:15</td>
+                                            <td><a href="javascript:void(0)">Harry Burke</a></td>
+                                            <td><strong>Order Submitted</strong></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- END Log Content -->
+                        </div>
+                        <!-- END Log Block -->
+                    </div>
+                    <!-- END Page Content -->
+
+{% endblock content %}

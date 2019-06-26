@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Admin{% endblock title %}
+
+{% block content %}
+
+<!-- Page content -->
+<div id="page-content">
+    <!-- Datatables Header -->
+    <div class="content-header">
+        <div class="header-section">
+            <h1>
+                Sub-Category </h1>
+        </div>
+    </div>
+    <ul class="breadcrumb breadcrumb-top">
+        <li>Manage Resources</li>
+        <li><a href="#">Sub-Category</a></li>
+    </ul>
+    <!-- END Datatables Header -->
+
+    <!-- Datatables Content -->
+    <div class="block full">
+        <div class="block-title">
+            <h2><strong>Sub-Category</strong> integration</h2>
+            <p class="AddNew"><b><a href="#" onclick="$('#myModal').modal('show');">ADD NEW +</a> </b></p>
+        </div>
+        <p>Admin Can Add / edit and Delete Units and Assign Categories</p>
+
+        <div class="table-responsive">
+            <table id="example" class="table table-vcenter table-condensed table-bordered">
+                <thead>
+                <tr>
+                    <th class="text-center">ID</th>
+                    <th class="text-center">SubCategory_Name</th>
+                    <th class="text-center">SubCategory_Description</th>
+                    <th class="text-center">SubCategory_Image</th>
+                    <th class="text-center">Category</th>
+                    <th class="text-center">Status</th>
+                    <th class="text-center">Actions</th>
+
+                </tr>
+                </thead>
+                <tbody class="text-center">
+                <tr>
+                    <td>1</td>
+                    <td>Sub-Category Name 1</td>
+                    <td>Description</td>
+                    <td><img src="{% static 'img/placeholders/avatars/avatar15.jpg' %}" alt="avatar" class="img-circle">
+                    </td>
+                    <td><label class="switch switch-primary"><input type="checkbox" checked><span></span></label></td>
+                    <td>
+                        <div class="btn-group">
+                            <a href="javascript:void(0)" data-toggle="tooltip" title="Edit"
+                               class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
+                            <a href="javascript:void(0)" data-toggle="tooltip" title="Delete"
+                               class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
+                        </div>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- END Datatables Content -->
+</div>
+<!-- END Page Content -->
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" tabindex="-2" role="dialog" aria-hidden="true">
+    <div class="modal-dialog animation-slideDown">
+
+        <!-- Modal content-->
+        <div class="modal-content CustomModal">
+            <div class="modal-body">
+                <div id="loginCustom">
+                    <!-- Login Title -->
+                    <div class="login-title text-right">
+                        <h1>
+                            <i class="Unitsss fa fa-hourglass pull-left"></i>
+                            <strong>Manage</strong> SubCategory<br>
+                            <br>
+                        </h1>
+                    </div>
+                    <!-- END Login Title -->
+
+                    <!-- Login Block -->
+                    <div class="block">
+                        <form method="post" class="form-horizontal form-bordered">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="subcategory-name">SubCategory_Name </label>
+                                <div class="col-md-9">
+                                    <input type="text" id="subcategory-name" name="subcategory-name" class="form-control"
+                                           placeholder="Enter category name">
+                                    <span class="help-block">Please enter category name</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="Subcategory-description">SubCategory-Description</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="Subcategory-description" name="Subcategory-description"
+                                           class="form-control" placeholder="Enter category description">
+                                    <span class="help-block">Please enter category description</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="subcategory-Image">SubCategory_Image</label>
+                                <div class="col-md-9">
+                                    <input type="file" id="subcategory-Image" name="sub_cat_Image">
+                                    <span class="help-block">Please upload category image</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="category-fk">Category</label>
+                                <div class="col-md-9">
+                                    <select id="category-fk" name="category-fk" class="select-chosen"
+                                            data-placeholder="Select Category" style="width: 250px;">
+                                        <option value="Select">Select Category</option>
+                                        {% for category in category_data %}
+                                        <option value="{{category.id}}">{{category.category_name}}</option>
+                                        {% endfor %}
+                                        <!-- Required for data-placeholder attribute to work with Chosen plugin -->
+
+                                    </select>
+                                    <span class="help-block">Please select category</span>
+                                </div>
+                            </div>
+                            <div class="form-group form-actions">
+                                <div class="col-md-6 col-md-offset-3">
+                                    <button type="button" class="btn btn-sm btn btn-success" onclick="save_subcategory()"><i
+                                            class="fa fa-save"></i>
+                                        Submit
+                                    </button>
+                                    <button type="submit" class="btn btn-sm btn-danger"><i class="fa fa-times"></i>
+                                        Reset
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- END Login Block -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    {% endblock content %}
+
+
+    {% block js_block %}
+    <!-- Load and execute javascript code used only in this page -->
+    <script src="{% static 'js/pages/manage_resources/subcategory.js' %}"></script>
+    {% endblock %}

@@ -1,0 +1,180 @@
+ {% load static %}
+ <!-- Main Sidebar -->
+ <div id="sidebar">
+    <!-- Wrapper for scrolling functionality -->
+    <div id="sidebar-scroll">
+        <!-- Sidebar Content -->
+        <div class="sidebar-content">
+            <!-- Brand -->
+            <a href="{% url 'index' %}" class="sidebar-brand">
+                <img src="{% static 'img/logo.png' %}" class="CustomLogo">
+            </a>
+            <!-- END Brand -->
+
+            <!-- User Info -->
+            <div class="sidebar-section sidebar-user clearfix sidebar-nav-mini-hide">
+                <div class="sidebar-user-avatar">
+                    <a href="#">
+                        <img src="{% static 'img/icons/profile.png' %}" alt="avatar">
+                    </a>
+                </div>
+                <div class="sidebar-user-name">ADMIN</div>
+                <div class="sidebar-user-links">
+                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Profile"><i class="gi gi-user"></i></a>
+                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Messages"><i class="gi gi-envelope"></i></a>
+                    <!-- Opens the user settings modal that can be found at the bottom of each page (page_footer.html in PHP version) -->
+                    <a href="javascript:void(0)" class="enable-tooltip" data-placement="bottom" title="Settings" onclick="$('#modal-user-settings').modal('show');"><i class="gi gi-cogwheel"></i></a>
+                    <a href="{% url 'logout' %}" data-toggle="tooltip" data-placement="bottom" title="Logout"><i class="gi gi-exit"></i></a>
+                </div>
+            </div>
+            <!-- END User Info -->
+
+            <!-- Sidebar Navigation -->
+            <ul class="sidebar-nav">
+                <li>
+                    <a href="{% url 'index' %}" class=" active"><i class="fa fa-dashboard sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Dashboard</span></a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-nav-menu activee"><i class="fa fa-angle-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="fa fa-suitcase sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Manage Resources</span></a>
+                    <ul>
+                        <li>
+                            <a href="{% url 'unit' %}" id="unit"><i class="fa fa-cube"></i> Units</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'category' %}" id="category"><i class="fa fa-hourglass"></i> Category</a>
+                        </li>
+                        <li>
+                            <a href="{%url 'subcategory'%}" id="subcategory"><i class="fa fa-hourglass"></i> Sub-Category</a>
+                        </li>
+                        <li>
+                            <a href="{%url 'products'%}" id="product"><i class="fa fa-hourglass"></i> Products</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'brand' %}" id="brand"><i class="fa fa-star-o"></i> Brand</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'variant' %}" id="variant"><i class="gi gi-playing_dices"></i> Variant</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'wastageType' %}" id="wastage"><i class="fa fa-trash" aria-hidden="true"></i> Wastage Type</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-nav-menu activee"><i class="fa fa-angle-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="fa fa-map-marker sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Manage Locations</span></a>
+                    <ul>
+                        <li>
+                            <a href="{% url 'ServiceCity' %}"><i class="fa fa-bank"></i> Service City</a>
+                        </li>
+                        <li>
+                            <a href="/Warehouse/"><i class="fa gi gi-package"></i> Warehouse</a>
+                        </li>
+                        <li>
+                            <a href="/ColdStorage/"><i class="gi gi-cargo"></i> Cold Storage</a>
+                        </li>
+                        <li>
+                            <a href="/DispatchDepot/"><i class="fa fa-th-large"></i> Dispatch Depot</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-nav-menu activee"><i class="fa fa-angle-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="gi gi-shopping_cart sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">eCommerce</span></a>
+                    <ul>
+                        <li>
+                            <a href="/page_ecom_dashboard/"><i class="fa fa-dashboard"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="/page_ecom_orders/"><i class="gi gi-shop_window"></i> Orders</a>
+                        </li>
+                        <li>
+                            <a href="/page_ecom_order_view/"><i class="gi gi-shopping_cart"></i> Order View</a>
+                        </li>
+                        <li>
+                            <a href="/page_ecom_products/"><i class="gi gi-shopping_bag"></i> Products</a>
+                        </li>
+                        <li>
+                            <a href="/page_ecom_product_edit/"><i class="gi gi-pencil"></i> Product Edit</a>
+                        </li>
+                        <li>
+                            <a href="/page_ecom_customer_view/"><i class="gi gi-user"></i> Customer View</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- END Sidebar Notifications -->
+        </div>
+        <!-- END Sidebar Content -->
+    </div>
+    <!-- END Wrapper for scrolling functionality -->
+</div>
+<!-- END Main Sidebar -->
+
+
+<!-- Scroll to top link, initialized in js/app.js - scrollToTop() -->
+<a href="#" id="to-top"><i class="fa fa-angle-double-up"></i></a>
+
+<!-- User Settings, modal which opens from Settings link (found in top right user menu) and the Cog link (found in sidebar user info) -->
+<div id="modal-user-settings" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog animation-slideDown">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header text-center">
+                <h2 class="modal-title"><i class="fa fa-pencil"></i> Settings</h2>
+            </div>
+            <!-- END Modal Header -->
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <form action="index.html" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered" onsubmit="return false;">
+                    <fieldset>
+                        <legend>Farmflyer-Admin Setting</legend>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Username</label>
+                            <div class="col-md-8">
+                                <p class="form-control-static">Admin</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="user-settings-email">Email</label>
+                            <div class="col-md-8">
+                                <input type="email" id="user-settings-email" name="user-settings-email" class="form-control" value="admin@example.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="user-settings-notifications">Email Notifications</label>
+                            <div class="col-md-8">
+                                <label class="switch switch-primary">
+                                    <input type="checkbox" id="user-settings-notifications" name="user-settings-notifications" value="1" checked>
+                                    <span></span>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Password Update</legend>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="user-settings-password">New Password</label>
+                            <div class="col-md-8">
+                                <input type="password" id="user-settings-password" name="user-settings-password" class="form-control" placeholder="Please choose a complex one..">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="user-settings-repassword">Confirm New Password</label>
+                            <div class="col-md-8">
+                                <input type="password" id="user-settings-repassword" name="user-settings-repassword" class="form-control" placeholder="..and confirm it!">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="form-group form-actions">
+                        <div class="col-xs-12 text-right">
+                            <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-sm btn-primary">Save Changes</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- END Modal Body -->
+        </div>
+    </div>
+</div>
+<!-- END User Settings -->
